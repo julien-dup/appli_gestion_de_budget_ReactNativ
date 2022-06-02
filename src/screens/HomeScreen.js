@@ -1,12 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useContext, useState  } from 'react'
+import GlobalContext from '../tools/GlobalContext'
 import { Picker } from "@react-native-picker/picker"
 import Icon from 'react-native-ionicons'
+
+
+
+  // UTILISATION DU CONTEXT (EXEMPLE EN LECTURE PUIS ECRITURE)
+  //const contextValue = useContext(GlobalContext)
+  //console.log(contextValue.user)
+  //contextValue.user = "Changement de nom ..."
+  //console.log(contextValue.user)
+ 
+
 
 const HomeScreen = () => {
 
   const [country, setCountry] = useState('Unknown');
 
+  
   return (
     <View style={{flex: 1}}>
       <Text>HomeScreen</Text>

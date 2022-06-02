@@ -1,7 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
+//import GlobalContext from '../tools/GlobalContext'
 
+  
 const StatScreen = () => {
+  
+  // UTILISATION DU CONTEXT (EXEMPLE EN LECTURE)
+  //const contextValue = useContext(GlobalContext)
+  //console.log(contextValue.user)
+
   return (
     <View>
       <Text>StatScreen</Text>
