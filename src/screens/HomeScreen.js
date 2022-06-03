@@ -3,7 +3,7 @@ import React, { useContext, useState  } from 'react'
 import GlobalContext from '../tools/GlobalContext'
 import { Picker } from "@react-native-picker/picker"
 import Icon from 'react-native-ionicons'
-
+import Data from '../../assets/data/data.json'
 
 
   // UTILISATION DU CONTEXT (EXEMPLE EN LECTURE PUIS ECRITURE)
@@ -16,23 +16,29 @@ import Icon from 'react-native-ionicons'
 
 const HomeScreen = () => {
 
-  const [country, setCountry] = useState('Unknown');
+  const [User, setUser] = useState('Unknown');
+  const contextValue = useContext(GlobalContext)  
 
+  console.log(contextValue)
+  console.log(Data.user)
   
   return (
-    <View style={{flex: 1}}>
-      <Text>HomeScreen</Text>
+
+    
+
+    <View style={{flex: 1, backgroundColor: '#2f3e46'}}>
+    
 
       <View style={{flex: 1, flexDirection: 'row'}}>
 
-        <View>
-            <Text style={styles.text}>KindaCode.com</Text>
+        <View style={{flex: 1}}>
+            <Text style={styles.text}>Select User</Text>
             <Picker
-            selectedValue={country}
-            onValueChange={(value, index) => setCountry(value)}
+            selectedValue={User}
+            onValueChange={(value, index) => setUser(value)}
             mode="dropdown" // Android only
             >
-            <Picker.Item label="Please select your country" value="Unknown" />
+            <Picker.Item label="Please select your user" value="Unknown" />
             <Picker.Item label="Australia" value="Australia" />
             <Picker.Item label="Belgium" value="Belgium" />
             <Picker.Item label="Canada" value="Canada" />
@@ -41,12 +47,12 @@ const HomeScreen = () => {
             </Picker>
         </View>
 
-        <View>
+        <View style={{flex: 1, alignItems: 'center'}}>
             <View style={{flexDirection: 'row'}}>
-              <Icon name="add" />
-              <Text>TOTAL</Text> 
+              <Icon name="ion-cash" />
+              <Text style={{color: 'white'}}>TOTAL</Text> 
             </View>
-            <Text>TEST €</Text>
+            <Text style={{color: 'white'}}>TEST €</Text>
         </View>
 
       </View>
