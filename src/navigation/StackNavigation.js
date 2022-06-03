@@ -10,7 +10,7 @@ const { Navigator , Screen } = createNativeStackNavigator();
 const App = () => (
 
       <Navigator initialRouteName='HomeAccount'>
-        <Screen name="HomeAccount" component={AccountScreen} />
+        <Screen name="HomeAccount" component={AccountScreen} options={{ headerShown : false }}/>
         <Screen name="Income" component={IncomeScreen} />
         <Screen name="Expense" component={ExpenseScreen} />
       </Navigator>

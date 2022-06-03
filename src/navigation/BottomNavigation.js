@@ -9,6 +9,7 @@ import StatScreen from '../screens/StatScreen';
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const BottomNavigation = () => {
+
   return (
     <NavigationContainer>
       <Navigator initialRouteName='Home' screenOptions={ { headerShown : false }}>
