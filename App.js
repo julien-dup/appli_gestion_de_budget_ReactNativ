@@ -1,12 +1,10 @@
 import React from 'react'
 import BottomNavigation from './src/navigation/BottomNavigation'
 import GlobalContext from './src/tools/GlobalContext'
-import Data from './assets/data/data.json'
 
 const contextValue = {
- 
-  user: ""
-  
+  user: "Mayer Franklin",
+  index: 0
 }
 
 const App = () => (
